@@ -9,10 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var myFitrstButton: UIButton!
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        self.myFitrstButton.setTitle("Кнопка", for: .normal)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.myFitrstButton.setTitleColor(.red, for: .normal)
+        let label = UILabel(frame: CGRect(x: 100, y: 100, width: 222, height: 213))
+        label.backgroundColor = #colorLiteral(red: 0.9466800094, green: 0.3168402612, blue: 0.2236361504, alpha: 1)
+        label.text = "Грут"
+        self.view.addSubview(label)
     }
 
     override func didReceiveMemoryWarning() {
